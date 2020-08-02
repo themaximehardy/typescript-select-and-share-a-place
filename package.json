@@ -1,0 +1,24 @@
+{
+  "name": "typescript-select-and-share-a-place",
+  "version": "1.0.0",
+  "description": "Using TypeScript to build a \"Select & Share a Place\" App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server"
+  },
+  "repository": "git@github.com:themaximehardy/typescript-select-and-share-a-place.git",
+  "author": "Max Hardy <max@hardy.work>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^14.0.27",
+    "axios": "^0.19.2",
+    "dotenv-webpack": "^2.0.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {}
+}

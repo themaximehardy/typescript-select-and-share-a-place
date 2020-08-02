@@ -4,6 +4,9 @@
 # VS Code
 .vscode
 
+# env file
+.env
+
 # Built files directory
 dist
 
