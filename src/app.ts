@@ -10,6 +10,13 @@ type GoogleGeocodingResponse = {
   status: 'OK' | 'ZERO_RESULTS';
 };
 
+// INJECT GOOGLE MAPS SCRIPT
+const head = document.getElementsByTagName('head')[0];
+const script = document.createElement('script');
+script.defer = true;
+script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}`;
+head.appendChild(script);
+
 function searchAddressHandler(event: Event) {
   event.preventDefault();
   const enteredAddress = addressInput.value;
@@ -23,7 +30,12 @@ function searchAddressHandler(event: Event) {
         throw new Error('Could not fetch location!');
       }
       const coordinates = res.data.results[0].geometry.location;
-      console.log(coordinates);
+
+      const map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
+        center: coordinates,
+        zoom: 16,
+      });
+      new google.maps.Marker({ position: coordinates, map: map });
     })
     .catch((err) => {
       alert(err.message);
