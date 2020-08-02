@@ -1,0 +1,12 @@
+# MacOS
+.DS_Store
+
+# VS Code
+.vscode
+
+# Built files directory
+dist
+
+# Dependency directories
+node_modules/
+
