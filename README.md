@@ -1,5 +1,7 @@
 # Select & Share a Place App
 
+![app](screenshots/app.png?raw=true 'app')
+
 ### Getting User Input
 
 ```ts
@@ -57,6 +59,8 @@ form.addEventListener('submit', searchAddressHandler);
 ```
 
 ### Rendering a Map with Google Maps
+
+We also need to install `yarn add -D @types/googlemaps`.
 
 ```ts
 import axios from 'axios';
